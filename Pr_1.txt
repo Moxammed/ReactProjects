@@ -1,0 +1,29 @@
+To start react you should have node 
+
+check version
+>node -v
+The version should be newer than v 16 .
+
+
+Use VS code and Prettier extension to format your code automatically when you write them.
+On the setting of VSCode, make formatting to be "format on save" automatically.
+
+ 
+ Two ways to create react Project.
+ - create react app
+ - vite 
+
+
+Create react Project using Vite.
+> npm create vite@latest
+
+  cd ReactProject_1
+  npm install
+  npm run dev
+
+
+Typescript has two extensions, either .ts or .tsx
+
+we use '.ts' for plain typescript files
+we use '.tsx' for react components
+
