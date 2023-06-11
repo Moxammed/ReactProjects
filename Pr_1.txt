@@ -27,3 +27,9 @@ Typescript has two extensions, either .ts or .tsx
 we use '.ts' for plain typescript files
 we use '.tsx' for react components
 
+
+
+Add Bootstrap to the Project
+>npm install bootstrap@5.4.0
+
+
