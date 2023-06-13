@@ -33,3 +33,10 @@ Add Bootstrap to the Project
 >npm install bootstrap@5.4.0
 
 
+Then delete the App.css content and delete the index.css file.
+
+After that add the line below to the main.tsx
+import "bootstrap/dist/css/bootstrap.css";
+
+
+
