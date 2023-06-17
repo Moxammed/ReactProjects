@@ -1,2 +1,26 @@
 Css-in-JS
 
+Both Css and js code are written in one file. 
+
+1- install:
+>npm i styled-components
+sometimes the above line gives error fix it with @latest as below:
+>npm i styled-components@latest
+
+There is no autocompletion untill u install 2nd library as below
+>npm i @types/styled-components
+
+Then import your header in your file u r workingin:
+import styled from 'styled-components'
+
+
+
+Icon in React
+To download icons in your project use as below:
+>npm install react-icons@latest
+
+to see the icons, check the link below:
+https://react-icons.github.io/react-icons
+
+when using it u can change its color and size in your project.
+

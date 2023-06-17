@@ -1,0 +1,11 @@
+if there are some states related to each other u may create an object from it.
+Sample:
+const [firstName, setFirstName]= useState("");
+const [lastName, setLastName]= useState("");
+
+use this instead and dont make it too much nested, so an object holds another and so on:
+
+const [person, setPerson]  = useState({
+	firstName = '',
+	lastName = ''
+});

@@ -1,4 +1,5 @@
-import "./ListGroup.css";
+import styles from "./ListGroup.module.css";
+import styled from "styled-components";
 
 interface Props {
  heading: string;
@@ -6,17 +7,30 @@ interface Props {
  onclick: () => void;
 }
 
+const List = styled.ul`
+ padding: 0;
+ background-color: coral;
+`;
+const ListItem = styled.li`
+ background-color: blue;
+ margin: 10px;
+`;
+
 const ListGroup = ({ city, heading, onclick }: Props) => {
  return (
   <>
+   <div>
+    <button className={styles.MyButton}>My Button</button>
+   </div>
+
    <h1>{heading}</h1>
-   <ul className="list-group">
+   <List>
     {city.map((item, index) => (
-     <li className="list-group-item" onClick={onclick} key={item}>
+     <ListItem onClick={onclick} key={item}>
       {index + 1 + "  " + item}
-     </li>
+     </ListItem>
     ))}
-   </ul>
+   </List>
   </>
  );
 };
