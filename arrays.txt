@@ -1,0 +1,15 @@
+Arrays can be created using useState.
+
+Arrays should not be updated directly, but it should be updated usign setState.
+
+
+create an array:
+
+const [tag, setTag] = useState(['happy', 'unhappy']);
+
+add an element to the array:
+setTag([...tag, 'exciting']);
+
+
+remove element from array:
+setTag(tag.filter(tag=>tag!=='happy')
