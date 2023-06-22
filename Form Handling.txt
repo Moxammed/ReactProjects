@@ -1,0 +1,58 @@
+There are 3 ways to handle forms.
+
+1- Uncontrolled way using useRef, as below:
+
+import { FormEvent, useRef } from "react";
+ const nameRef = useRef<HTMLInputElement>(null);
+  const person = {
+  name: "",
+  age: 0,
+ };
+
+ const handleSubmit = (event: FormEvent) => {
+  event.preventDefault();
+  if (nameRef.current !== null) person.name = nameRef.current.value;
+  if (ageRef.current !== null) person.age = parseInt(ageRef.current.value);
+
+  console.log(person);
+ };
+
+ <form> 
+ <input ref={nameRef} id="name" type="text" className="form-control" />
+ <form/>
+
+
+ 2- Controlled way using useState, as below:
+ import { FormEvent, useState } from "react";
+
+const FormUsingState = () => {
+ const [person, setPerson] = useState({
+  name: "",
+  age: 0,
+ });
+
+ const handleSubmit = (event: FormEvent) => {
+  event.preventDefault();
+  console.log(person);
+ };
+<form>
+ <input onChange={(event) => setPerson({ ...person, name: event.target.value })} 
+ id="name" type="text" className="form-control"
+ value={person.name}
+ />
+ <form/>
+
+
+ 3- using React Hook Form
+ 
+ download it first:
+ npm install react-hook-form@latest
+ 
+ then import it to your file,
+ import {useForm} from "react-hook-form";
+
+ const { register, handleSubmit } = useForm();
+ console.log(register("name"));
+
+ <input {...register("name")} id="name" type="text" className="form-control" />
+
