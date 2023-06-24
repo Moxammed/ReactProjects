@@ -56,3 +56,35 @@ const FormUsingState = () => {
 
  <input {...register("name")} id="name" type="text" className="form-control" />
 
+
+
+
+
+
+ Validtion with ZOD
+ install zod:
+ npm install zod@latest
+
+ include zod:
+ import { z } from "zod";
+
+Validation:
+const schema = z.object({
+ name: z.string().min(2).max(15).nonempty(),
+ age: z.number().min(18).max(150).nonnegative(),
+});
+
+type formData = z.infer<typeof schema>;
+
+
+install resolver for ZOD as below:
+npm install @hookform/resolvers
+
+add ZOD resolver:
+import {zodResolver} from "@hookform/resolvers/zod";
+
+
+
+
+
+

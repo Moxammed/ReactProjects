@@ -1,0 +1,66 @@
+import { useForm } from "react-hook-form";
+import { z } from "zod";
+import { zodResolver } from "@hookform/resolvers/zod";
+
+const schema = z.object({
+ name: z
+  .string()
+  .min(2, "Name should be at least two alphabets")
+  .max(15, "Name should not exceed 15 characters"),
+ age: z
+  .number({ invalid_type_error: "Age field is required" })
+  .min(18)
+  .max(150)
+  .nonnegative(),
+});
+
+type formData = z.infer<typeof schema>;
+
+const formValidationZod = () => {
+ const {
+  register,
+  handleSubmit,
+  formState: { errors, isValid },
+ } = useForm<formData>({
+  resolver: zodResolver(schema),
+ });
+
+ //  console.log(register("name"));
+
+ return (
+  <div>
+   <form onSubmit={handleSubmit((data) => console.log(data))}>
+    <div className="mb-3">
+     <label htmlFor="name" className="form-label">
+      Name
+     </label>
+     <input
+      {...register("name")}
+      id="name"
+      type="text"
+      className="form-control"
+     />
+     {errors.name && errors.name.message}
+    </div>
+
+    <div className="mb-3">
+     <label htmlFor="age" className="form-label">
+      Age
+     </label>
+     <input
+      {...register("age", { valueAsNumber: true })}
+      id="age"
+      type="number"
+      className="form-control"
+     />
+     {errors.age && errors.age.message}
+    </div>
+    <button /*disabled={!isValid}*/ className="btn btn-primary" type="submit">
+     Submit
+    </button>
+   </form>
+  </div>
+ );
+};
+
+export default formValidationZod;
