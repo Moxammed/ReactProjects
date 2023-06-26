@@ -12,4 +12,7 @@ setTag([...tag, 'exciting']);
 
 
 remove element from array:
-setTag(tag.filter(tag=>tag!=='happy')
+setTag(tag.filter(tag=>tag!=='happy');
+
+
+update element

@@ -1,0 +1,17 @@
+Previously:
+1- event post => special needs for special needs.
+2- Parent connections => personal event and dating
+
+
+Now:
+create a website for events(event management) for non profit organizations.(Admin, posters-pay(subscription either monthly or yearly or perpost)-, user or family-free-). It has subscription.
+Dashboard for posters, can edit, copy, delete or renew.
+
+- Number of Pages
+- blue print (mockup) and Pages
+- Technologies
+- Design
+
+Then, create an application to get events from the website.
+
+

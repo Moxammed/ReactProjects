@@ -1,0 +1,22 @@
+npm install bootstrap@latest
+import "bootstrap/dist/css/bootstrap.css";
+
+
+npm install react-hook-form@latest
+import {useForm} from "react-hook-form";
+const {register,handleSubmit,formState: { errors, isValid },} = useForm<formData>({
+  resolver: zodResolver(schema),
+ });
+
+
+npm install zod@latest
+import { z } from "zod";
+
+
+npm install @hookform/resolvers
+import {zodResolver} from "@hookform/resolvers/zod";
+
+
+
+
+
