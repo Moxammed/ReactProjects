@@ -3,6 +3,6 @@ useEffect(()=>{})
 To execute a piece of code after a component is rendered
 
 So basically if we want to change DOM property we gonna use this. It is real name is "AfterRender"
-It odes not have any relation to returning a jsx code or result.
+It does not have any relation to returning a jsx code or result.
 
 
