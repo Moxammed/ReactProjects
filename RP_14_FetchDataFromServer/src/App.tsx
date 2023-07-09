@@ -1,7 +1,14 @@
 import FetchData from "./FetchData";
+import DeleteUser from "./AddUser";
+import AddUser from "./AddUser";
 
 const App = () => {
- return <FetchData />;
+ return (
+  <>
+   {/* <FetchData /> */}
+   <AddUser />
+  </>
+ );
 };
 
 export default App;
