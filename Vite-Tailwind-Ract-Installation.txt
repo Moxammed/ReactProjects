@@ -1,0 +1,48 @@
+> npt create vite
+ 
+ name the project, select react and typescript.
+
+> cd projectName
+> npm install
+
+open visual studio
+> code .
+
+open terminal of visual studio and install tailwind
+
+> npm install -D tailwindcss postcss autoprefixer
+> npx tailwindcss init -p
+
+Inside tailwind.config.js we need to specify the path to our React template files by adding the following configuration setting:
+
+module.exports = {
+   content: [
+     "./src/**/*.{js,jsx,ts,tsx}",
+   ],
+   theme: {
+     extend: {},
+   },
+   plugins: [],
+ }
+
+
+
+ Add the following Tailwind CSS directives into file index.css:
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+write a peice of tailwind code in the app.tsx
+ <div>
+   <p className="text-gray-500 text-lg">React and Tailwind CSS in action</p>
+ </div>
+
+
+ready, start the server
+> npm run dev
+
+
+beautiful link:
+https://www.freecodecamp.org/news/how-to-install-tailwindcss-in-react/
