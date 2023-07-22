@@ -43,6 +43,3 @@ write a peice of tailwind code in the app.tsx
 ready, start the server
 > npm run dev
 
-
-beautiful link:
-https://www.freecodecamp.org/news/how-to-install-tailwindcss-in-react/
