@@ -1,4 +1,4 @@
-> npt create vite
+> npm create vite
  
  name the project, select react and typescript.
 
