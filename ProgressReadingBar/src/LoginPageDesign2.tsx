@@ -68,12 +68,15 @@ const LoginPageDesign2 = () => {
       <div className="pt-12 pb-12 text-center">
        <p>
         Don&#x27;t have an account?
-        <a href="/CreateAccount" className="font-semibold underline">
+        {/* <a href="/CreateAccount" className="font-semibold underline"> */}
+        <Link to={"/CreateAccount"} className="font-semibold underline">
          Register here.
-         {/* <div className="font-semibold underline">
+        </Link>
+        {/* Register here. */}
+        {/* <div className="font-semibold underline">
          <Link to="/CreateAccount">Register here.</Link>
         </div> */}
-        </a>
+        {/* </a> */}
        </p>
       </div>
      </div>

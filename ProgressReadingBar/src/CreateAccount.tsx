@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const CreateAccount = () => {
  return (
   <>
@@ -7,13 +9,18 @@ const CreateAccount = () => {
     </div>
     <span className="justify-center text-sm text-center text-gray-500 flex-items-center dark:text-gray-400">
      Already have an account ?
-     <a
+     {/* <a
       href="./LoginPage.tsx"
       target="_blank"
       className="text-sm text-blue-500 underline hover:text-blue-700"
+     > */}
+     <Link
+      to={"/"}
+      className="text-sm text-blue-500 underline hover:text-blue-700"
      >
       Sign in
-     </a>
+     </Link>
+     {/* </a> */}
     </span>
     <div className="p-6 mt-8">
      <form action="#">
@@ -63,7 +70,7 @@ const CreateAccount = () => {
         type="submit"
         className="py-2 px-4  bg-purple-600 hover:bg-purple-700 focus:ring-purple-500 focus:ring-offset-purple-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg "
        >
-        Login
+        Create
        </button>
       </div>
      </form>

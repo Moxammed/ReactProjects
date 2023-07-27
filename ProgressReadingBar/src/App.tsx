@@ -3,7 +3,7 @@ import {
  BrowserRouter as Router,
  Routes,
  Route,
- useNavigate,
+ Navigate,
 } from "react-router-dom";
 
 import UseReadingProgress from "./UseReadingProgress";
@@ -13,7 +13,6 @@ import LoginPageDesign2 from "./LoginPageDesign2";
 
 const App = () => {
  const completion = UseReadingProgress();
- const navigate = useNavigate();
  return (
   <>
    <nav className="sticky z-50 top-0 backdrop-blur-3xl py-1">
@@ -28,13 +27,14 @@ const App = () => {
    <div>
     {/* <LoginPage /> */}
     {/* <CreateAccount /> */}
-    <LoginPageDesign2 />
+    {/* <LoginPageDesign2 /> */}
     <Router>
      <div className="App">
       <Routes>
        <Route path="/" element={<LoginPageDesign2 />} />
-       {/* <Route path="/createAccount" element={<CreateAccount />} /> */}
-       {/* <Route path="/login" element={<LoginPage />} /> */}
+       <Route path="/createAccount" element={<CreateAccount />} />
+       <Route path="/login" element={<LoginPage />} />
+       {/* <Navigate to="/" /> */}
       </Routes>
      </div>
     </Router>
